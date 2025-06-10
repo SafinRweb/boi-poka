@@ -5,7 +5,7 @@ const Book = ({ book }) => {
     const { image, bookName, author, tags, category, bookId } = book;
 
     return (
-        <div className="card bg-base-100 w-96 shadow-xl p-6 rounded-2xl">
+        <div className="card bg-base-100 shadow-xl p-6 rounded-2xl">
             <Link to={`/books/${bookId}`}>
                 <figure className="bg-[#131313]/5 py-8">
                     <img
@@ -17,7 +17,9 @@ const Book = ({ book }) => {
             <div className="card-body">
                 <div className="flex gap-3">
                     {
-                        tags.map(tag => <button className="btn btn-xs  bg-[#131313]/5 text-[#23BE0A] border-0">{tag}</button>)
+                        tags.map((tag, index) => <button
+                        key={index}    
+                        className="btn btn-xs  bg-[#131313]/5 text-[#23BE0A] border-0">{tag}</button>)
                     }
                 </div>
                 <h2 className="card-title font-bold text-xl">
