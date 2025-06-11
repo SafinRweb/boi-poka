@@ -14,6 +14,7 @@ const addToStoredReadList = (id) => {
     const storedList = getStoredReadList();
     if (storedList.includes(id)) {
         console.log(id, 'already exists in the read list')
+        toast('This Book is already added to your Mark As Read')
     }
     else {
         storedList.push(id);
@@ -36,6 +37,7 @@ const addToStoredWishList = (id) => {
     const storedWishList = getStoredWishList();
     if (storedWishList.includes(id)) {
         console.log(id, 'already exists in the read list')
+        toast('You have already read this')
     }
     else {
         storedWishList.push(id);
