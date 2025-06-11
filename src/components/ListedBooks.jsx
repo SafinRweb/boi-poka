@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import { getStoredReadList } from '../Utility/addToDb';
 import { getStoredWishList } from '../Utility/addToDb';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Helmet } from 'react-helmet';
 import 'react-tabs/style/react-tabs.css';
 import Book from './Book';
 
@@ -25,6 +26,9 @@ const ListedBooks = () => {
     },[allBooks])
     return (
         <div>
+             <Helmet>
+                <title>Boi Poka | Listed Books</title>
+            </Helmet>
             <h3 className='text-3xl my-8'>ListedBooks</h3>
 
             <Tabs>
